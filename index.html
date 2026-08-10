@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Veronica Lai | Supporto commerciale e gestione clienti</title>
+  <title>Veronica Lai | Supporto clienti, CRM e back office commerciale</title>
 
   <meta
     name="description"
-    content="Collaboratrice freelance per supporto commerciale, gestione clienti, CRM, follow-up e customer care da remoto."
+    content="Collaboratrice freelance per supporto clienti, CRM, follow-up, gestione appuntamenti e back office commerciale da remoto."
   >
 
   <style>
     :root {
-      --bg: #f6f1ec;
-      --surface: #fffaf6;
-      --text: #272220;
-      --muted: #6f6863;
-      --accent: #915f68;
-      --accent-dark: #744851;
-      --line: #ded4cc;
-      --soft: #eaded7;
+      --bg: #f7f3ef;
+      --surface: #fffdfb;
+      --text: #2d2725;
+      --muted: #746d68;
+      --accent: #9c2858;
+      --accent-dark: #7f2048;
+      --soft: #ead9df;
+      --line: #ded5cf;
+      --dark: #2a2423;
     }
 
     * {
@@ -45,6 +46,11 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(1120px, 88%);
       margin: 0 auto;
@@ -53,7 +59,7 @@
     /* NAV */
 
     nav {
-      padding: 26px 0;
+      padding: 28px 0;
     }
 
     .nav-inner {
@@ -64,9 +70,15 @@
     }
 
     .brand {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--accent);
+      font-style: italic;
     }
 
     .nav-links {
@@ -82,38 +94,31 @@
     /* HERO */
 
     .hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 0 100px;
-      position: relative;
-      overflow: hidden;
+      padding: 75px 0 110px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 70px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 80px;
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 24px;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-      background: rgba(255,255,255,0.35);
+    .hero-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: clamp(46px, 7vw, 86px);
-      line-height: 0.98;
+      font-size: clamp(48px, 6.6vw, 82px);
+      line-height: 0.99;
       letter-spacing: -0.055em;
-      max-width: 850px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
+      max-width: 770px;
     }
 
     h1 span {
@@ -121,10 +126,10 @@
     }
 
     .hero-text {
-      max-width: 690px;
+      max-width: 680px;
       font-size: 20px;
       color: var(--muted);
-      margin-bottom: 35px;
+      margin-bottom: 34px;
     }
 
     .buttons {
@@ -142,8 +147,8 @@
     }
 
     .button-primary {
-      color: white;
       background: var(--accent);
+      color: white;
     }
 
     .button-primary:hover {
@@ -160,57 +165,42 @@
       color: white;
     }
 
-    /* HERO ART */
-
-    .art {
+    .hero-photo-wrap {
       position: relative;
-      height: 430px;
+      padding-left: 28px;
     }
 
-    .shape {
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 28px;
+      box-shadow: 0 22px 60px rgba(45, 39, 37, 0.13);
+    }
+
+    .photo-note {
       position: absolute;
-      border-radius: 48% 52% 63% 37% / 39% 45% 55% 61%;
+      left: 0;
+      bottom: 34px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 15px 18px;
+      max-width: 210px;
+      box-shadow: 0 10px 30px rgba(45, 39, 37, 0.08);
+      font-size: 13px;
+      color: var(--muted);
     }
 
-    .shape-one {
-      width: 310px;
-      height: 350px;
-      background: var(--soft);
-      right: 20px;
-      top: 20px;
-      transform: rotate(12deg);
+    .photo-note strong {
+      display: block;
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 3px;
     }
 
-    .shape-two {
-      width: 190px;
-      height: 190px;
-      background: var(--accent);
-      right: 170px;
-      top: 150px;
-      opacity: 0.85;
-      transform: rotate(-18deg);
-    }
-
-    .shape-three {
-      width: 100px;
-      height: 100px;
-      border: 2px solid var(--text);
-      right: 10px;
-      bottom: 25px;
-      background: transparent;
-    }
-
-    .art-line {
-      position: absolute;
-      width: 210px;
-      height: 1px;
-      background: var(--text);
-      right: 25px;
-      top: 120px;
-      transform: rotate(-25deg);
-    }
-
-    /* GENERAL SECTIONS */
+    /* GENERAL */
 
     section {
       padding: 105px 0;
@@ -218,19 +208,19 @@
 
     .section-label {
       color: var(--accent);
-      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.13em;
-      margin-bottom: 18px;
+      letter-spacing: 0.12em;
+      font-size: 12px;
       font-weight: 700;
+      margin-bottom: 18px;
     }
 
     h2 {
-      font-size: clamp(34px, 5vw, 56px);
+      font-size: clamp(36px, 5vw, 58px);
       line-height: 1.05;
-      letter-spacing: -0.035em;
-      max-width: 800px;
-      margin-bottom: 45px;
+      letter-spacing: -0.04em;
+      margin-bottom: 42px;
+      max-width: 820px;
     }
 
     /* SERVICES */
@@ -244,58 +234,66 @@
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 24px;
     }
 
     .service {
-      min-height: 220px;
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: rgba(255,255,255,0.4);
+      padding: 28px 6px 26px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .service-number {
-      display: block;
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      margin-bottom: 20px;
       color: var(--accent);
-      margin-bottom: 35px;
-      font-size: 13px;
+    }
+
+    .service-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .service h3 {
-      font-size: 21px;
-      margin-bottom: 12px;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .service p {
       color: var(--muted);
       font-size: 15px;
+      max-width: 320px;
     }
 
     /* APPROACH */
 
     .approach-grid {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 90px;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 85px;
       align-items: start;
     }
 
     .big-note {
-      font-size: clamp(32px, 4vw, 50px);
-      line-height: 1.08;
-      letter-spacing: -0.035em;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.07;
+      letter-spacing: -0.04em;
     }
 
     .approach-copy p {
       color: var(--muted);
       font-size: 18px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .approach-list {
       list-style: none;
-      margin-top: 35px;
+      margin-top: 34px;
     }
 
     .approach-list li {
@@ -303,20 +301,70 @@
       border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      background: #efe7e3;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .package {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-tag {
+      font-size: 12px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .package h3 {
+      font-size: 24px;
+      margin-bottom: 13px;
+    }
+
+    .package p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .package-note {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 700;
     }
 
     /* ABOUT */
 
     .about {
-      background: #272220;
-      color: #fffaf6;
+      background: var(--dark);
+      color: white;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 100px;
+      gap: 95px;
       align-items: center;
     }
 
@@ -325,7 +373,7 @@
     }
 
     .about p {
-      color: #d2c7c0;
+      color: #d4cbc6;
       font-size: 18px;
       margin-bottom: 22px;
     }
@@ -342,15 +390,15 @@
     }
 
     .contact p {
-      max-width: 620px;
-      margin: 0 auto 32px;
+      max-width: 640px;
+      margin: 0 auto 30px;
       color: var(--muted);
       font-size: 18px;
     }
 
     .email {
       display: inline-block;
-      font-size: clamp(20px, 3vw, 32px);
+      font-size: clamp(22px, 3vw, 33px);
       color: var(--accent);
       border-bottom: 1px solid var(--accent);
     }
@@ -360,8 +408,8 @@
     footer {
       padding: 35px 0;
       border-top: 1px solid var(--line);
-      font-size: 13px;
       color: var(--muted);
+      font-size: 13px;
     }
 
     .footer-inner {
@@ -372,11 +420,7 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 850px) {
-      .nav-links {
-        display: none;
-      }
-
+    @media (max-width: 900px) {
       .hero-grid,
       .approach-grid,
       .about-grid {
@@ -384,30 +428,55 @@
         gap: 50px;
       }
 
-      .art {
-        height: 300px;
+      .service-grid,
+      .package-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .service-grid {
-        grid-template-columns: 1fr;
+      .hero-photo-wrap {
+        max-width: 560px;
+        padding-left: 0;
       }
 
-      .hero {
-        padding-top: 45px;
+      .photo-note {
+        left: 18px;
       }
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      .service-grid,
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
       .container {
         width: 90%;
       }
 
       section {
-        padding: 75px 0;
+        padding: 78px 0;
+      }
+
+      .hero {
+        padding-top: 50px;
       }
 
       .hero-text {
         font-size: 17px;
+      }
+
+      .hero-photo-wrap {
+        padding-left: 0;
+      }
+
+      .photo-note {
+        position: static;
+        margin-top: 14px;
+        max-width: none;
       }
 
       .footer-inner {
@@ -421,14 +490,19 @@
 
   <nav>
     <div class="container nav-inner">
-      <a href="#" class="brand">VERONICA LAI</a>
+
+      <a href="#" class="brand">
+        Veronica <span>Lai</span>
+      </a>
 
       <div class="nav-links">
         <a href="#servizi">Servizi</a>
         <a href="#come-lavoro">Come lavoro</a>
+        <a href="#collaborazione">Collaborazione</a>
         <a href="#chi-sono">Chi sono</a>
         <a href="#contatti">Contatti</a>
       </div>
+
     </div>
   </nav>
 
@@ -439,7 +513,10 @@
       <div class="container hero-grid">
 
         <div>
-          <div class="eyebrow">Supporto operativo da remoto</div>
+
+          <div class="hero-kicker">
+            Supporto operativo da remoto
+          </div>
 
           <h1>
             Meno cose da rincorrere.
@@ -453,6 +530,7 @@
           </p>
 
           <div class="buttons">
+
             <a
               class="button button-primary"
               href="mailto:veronica@veronicalai.com"
@@ -466,14 +544,25 @@
             >
               Scopri cosa posso gestire
             </a>
+
           </div>
+
         </div>
 
-        <div class="art" aria-hidden="true">
-          <div class="shape shape-one"></div>
-          <div class="shape shape-two"></div>
-          <div class="shape shape-three"></div>
-          <div class="art-line"></div>
+
+        <div class="hero-photo-wrap">
+
+          <img
+            src="veronica-lai.webp"
+            alt="Veronica Lai"
+            class="hero-photo"
+          >
+
+          <div class="photo-note">
+            <strong>Veronica Lai</strong>
+            Collaboratrice freelance
+          </div>
+
         </div>
 
       </div>
@@ -483,70 +572,136 @@
     <section class="services" id="servizi">
       <div class="container">
 
-        <div class="section-label">Cosa posso fare per te</div>
+        <div class="section-label">
+          Cosa posso fare per te
+        </div>
 
         <h2>
           Le attività che occupano tempo
           non devono per forza occupare il tuo.
         </h2>
 
+
         <div class="service-grid">
 
           <article class="service">
-            <span class="service-number">01</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 21a8 8 0 0 0-16 0"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+
             <h3>Gestione clienti</h3>
+
             <p>
               Email, richieste, assistenza e comunicazioni quotidiane
               gestite con attenzione e continuità.
             </p>
+
           </article>
 
+
           <article class="service">
-            <span class="service-number">02</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4z"/>
+                <path d="m4 8 8 5 8-5"/>
+              </svg>
+            </div>
+
             <h3>Lead e follow-up</h3>
+
             <p>
               Qualificazione dei contatti, raccolta delle informazioni
               necessarie e follow-up senza lasciare lead dimenticati.
             </p>
+
           </article>
 
+
           <article class="service">
-            <span class="service-number">03</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <ellipse cx="12" cy="5" rx="7" ry="3"/>
+                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/>
+                <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>
+              </svg>
+            </div>
+
             <h3>CRM</h3>
+
             <p>
               Aggiornamento dei dati, stato dei contatti e organizzazione
               delle informazioni utili al team commerciale.
             </p>
+
           </article>
 
+
           <article class="service">
-            <span class="service-number">04</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M16 3v4M8 3v4M3 10h18"/>
+              </svg>
+            </div>
+
             <h3>Appuntamenti</h3>
+
             <p>
               Organizzazione e gestione degli appuntamenti con clienti,
               prospect e collaboratori.
             </p>
+
           </article>
 
+
           <article class="service">
-            <span class="service-number">05</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 12h18"/>
+                <path d="m15 6 6 6-6 6"/>
+                <path d="M4 6h5"/>
+                <path d="M4 18h5"/>
+              </svg>
+            </div>
+
             <h3>Supporto commerciale</h3>
+
             <p>
               Attività operative che permettono al reparto commerciale
               di concentrarsi maggiormente sulla vendita.
             </p>
+
           </article>
 
+
           <article class="service">
-            <span class="service-number">06</span>
+
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="14" rx="2"/>
+                <path d="M8 21h8M12 18v3"/>
+              </svg>
+            </div>
+
             <h3>Supporto digitale</h3>
+
             <p>
               Documenti, fogli di lavoro, report semplici, gestione dati
               e piccole attività operative online.
             </p>
+
           </article>
 
         </div>
+
       </div>
     </section>
 
@@ -555,16 +710,22 @@
       <div class="container approach-grid">
 
         <div>
-          <div class="section-label">Come lavoro</div>
+
+          <div class="section-label">
+            Come lavoro
+          </div>
 
           <p class="big-note">
             Entro nel processo,
             capisco cosa serve
             e me ne occupo.
           </p>
+
         </div>
 
+
         <div class="approach-copy">
+
           <p>
             Non cerco di complicare ciò che può essere semplice.
             Preferisco procedure chiare, informazioni ordinate e
@@ -578,6 +739,7 @@
           </p>
 
           <ul class="approach-list">
+
             <li>
               <span>Modalità</span>
               <strong>Da remoto</strong>
@@ -592,7 +754,91 @@
               <span>Approccio</span>
               <strong>Pratico e autonomo</strong>
             </li>
+
           </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="packages" id="collaborazione">
+      <div class="container">
+
+        <div class="section-label">
+          Come possiamo lavorare insieme
+        </div>
+
+        <h2>
+          Un supporto proporzionato
+          a quello che ti serve davvero.
+        </h2>
+
+
+        <div class="package-grid">
+
+          <article class="package">
+
+            <div class="package-tag">
+              Per esigenze specifiche
+            </div>
+
+            <h3>Supporto occasionale</h3>
+
+            <p>
+              Per attività definite, picchi di lavoro o necessità
+              operative che non richiedono una collaborazione continuativa.
+            </p>
+
+            <div class="package-note">
+              Pacchetti di ore su richiesta
+            </div>
+
+          </article>
+
+
+          <article class="package">
+
+            <div class="package-tag">
+              Collaborazione continuativa
+            </div>
+
+            <h3>Supporto mensile</h3>
+
+            <p>
+              Per aziende e professionisti che desiderano delegare
+              con continuità una parte delle attività operative
+              e della gestione clienti.
+            </p>
+
+            <div class="package-note">
+              Pacchetti mensili personalizzabili
+            </div>
+
+          </article>
+
+
+          <article class="package">
+
+            <div class="package-tag">
+              Esigenze più articolate
+            </div>
+
+            <h3>Soluzione su misura</h3>
+
+            <p>
+              Quando le attività sono diverse o il flusso di lavoro
+              richiede un'organizzazione specifica, costruiamo insieme
+              una modalità di collaborazione adatta.
+            </p>
+
+            <div class="package-note">
+              Preventivo personalizzato
+            </div>
+
+          </article>
+
         </div>
 
       </div>
@@ -603,16 +849,22 @@
       <div class="container about-grid">
 
         <div>
-          <div class="section-label">Chi sono</div>
+
+          <div class="section-label">
+            Chi sono
+          </div>
 
           <h2>
             Esperienza con le persone.
             Testa organizzativa.
             Occhio creativo.
           </h2>
+
         </div>
 
+
         <div>
+
           <p>
             Sono Veronica Lai e ho maturato una lunga esperienza
             nella gestione dei clienti e nel supporto alle attività
@@ -622,8 +874,8 @@
           <p>
             Ho lavorato quotidianamente con CRM, telefono, lead,
             appuntamenti, assistenza e follow-up, imparando a gestire
-            elevati volumi di contatti senza perdere di vista ciò che
-            serve davvero.
+            elevati volumi di contatti senza perdere di vista ciò
+            che serve davvero.
           </p>
 
           <p>
@@ -632,6 +884,7 @@
             organizzazione quando serve ordine, creatività quando serve
             trovare una soluzione.
           </p>
+
         </div>
 
       </div>
@@ -641,7 +894,9 @@
     <section class="contact" id="contatti">
       <div class="container">
 
-        <div class="section-label">Contatti</div>
+        <div class="section-label">
+          Contatti
+        </div>
 
         <h2>
           Hai bisogno di alleggerire
@@ -669,8 +924,15 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© 2026 Veronica Lai</span>
-      <span>Collaboratrice freelance · Italia</span>
+
+      <span>
+        © 2026 Veronica Lai
+      </span>
+
+      <span>
+        Collaboratrice freelance · Italia
+      </span>
+
     </div>
   </footer>
 
